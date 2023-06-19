@@ -1,5 +1,58 @@
 # Release notes
 
+## 7.0.5
+
+### Templated Drupal multi fields not rendering
+
+#### What is it?
+
+When templating a Drupal multi field with Site Studio the values and HTML would not appear.
+
+#### What impact will there be?
+
+When templating a Drupal multi field with Site Studio the HTML and values will render as expected.
+
+#### What actions do I need to take?
+
+Site Studio rebuild or `drush cohesion:rebuild`
+
+#### What impact will there be?
+
+None.
+
+### Visual page builder no height components flickering
+
+#### What is it?
+
+When using components with no height or with images that aren't defined, they cause a flickering when using visual page builder. This fix stops the flickering issue.
+
+#### What impact will there be?
+
+Visual page builder will not have any component flickering issues.
+
+#### What actions do I need to take?
+
+A Site Studio import or `drush cohesion:import`
+
+### Cannot read properties of undefined (reading 'uuid') error on page builder
+
+#### What is it?
+
+Fixes an issue when a component displaying a Drupal view, which in turn rendered content and potentially the same content entity a user was viewing.
+When attempting to use the page builder in this scenario the error "Cannot read properties of undefined (reading 'uuid')" was displayed.
+
+#### What impact will there be?
+
+The page builder will now work as expected in this scenario as the page builder does not attempt to add markup to items in the Drupal view.
+
+#### What actions do I need to take?
+
+None.
+
+#### Are there any risks I should be aware of?
+
+None.
+
 ## 7.0.4
 
 ### Color palette performance

@@ -604,11 +604,21 @@ class TwigExtension extends AbstractExtension {
     return Markup::create($token_replacement);
   }
 
+  /**
+   * Provides component markup to the visual page builder.
+   *
+   * @param $renderer
+   * @param $_context
+   * @param $componentInstanceUuid
+   * @param $component_content_uuid
+   * @param $component_content_id
+   * @return array
+   */
   public function addComponentFrontEndBuilderMarkup($renderer, $_context, $componentInstanceUuid, $component_content_uuid = NULL, $component_content_id = NULL) {
 
     $build = [];
 
-    if ($this->isFrontendEditor() && $this->isParentContent($_context) && !isset($_context['hideContextualLinks']) && !isset($_context['isPreview']) && $this->hasDrupalPermission("access components")) {
+    if ($this->isFrontendEditor() && $this->isParentContent($_context) && !isset($_context['hideContextualLinks']) && !isset($_context['isPreview']) && !isset($_context['view']) && $this->hasDrupalPermission("access components")) {
 
       $coh_start = [
         '#type' => 'container',

@@ -1,7 +1,6 @@
 # Acquia Site Studio
 
 [![Build Status](https://core.cloudbees.ais.acquia.io/devops-pipeline-jenkins/buildStatus/icon?job=SITESTUDIO-Cohesion-Dev-PIPELINE%2Fdevelop)](https://core.cloudbees.ais.acquia.io/devops-pipeline-jenkins/job/SITESTUDIO-Cohesion-Dev-PIPELINE/job/develop/)
-[![Coverage Status](https://coveralls.io/repos/github/acquia/cohesion-dev/badge.svg?branch=&t=UOU34W)](https://coveralls.io/github/acquia/cohesion-dev?branch=develop)
 
 ## Installation with composer
 
